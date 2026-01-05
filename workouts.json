@@ -1,0 +1,691 @@
+[
+  {
+    "_id": {
+      "$oid": "6795beefdf71a21ff51f5ff0"
+    },
+    "path": "Animal Flow",
+    "title": "Crawls #1",
+    "tags": [
+      "#crawl",
+      "#fullbody"
+    ],
+    "rest_between_sets": {
+      "$numberInt": "1"
+    },
+    "rest_between_exercises": {
+      "$numberInt": "10"
+    },
+    "freq_factor": {
+      "$numberInt": "1"
+    },
+    "sets": {
+      "$numberInt": "8"
+    },
+    "workout": [
+      {
+        "name": "cat crawl",
+        "1s_max": {
+          "$numberInt": "9"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "bear crawl",
+        "1s_max": {
+          "$numberInt": "9"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "crab walk",
+        "1s_max": {
+          "$numberInt": "9"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "loaded beast side lifts",
+        "1s_max": {
+          "$numberInt": "9"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "crawl switch",
+        "1s_max": {
+          "$numberInt": "9"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "ape crawl",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "frog crawl",
+        "1s_max": {
+          "$numberInt": "9"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "679f4c4bcfeccaf49389c4c6"
+    },
+    "path": "Animal Flow",
+    "title": "Crawls #2",
+    "tags": [
+      "#crawl",
+      "#fullbody"
+    ],
+    "rest_between_sets": {
+      "$numberInt": "2"
+    },
+    "rest_between_exercises": {
+      "$numberInt": "10"
+    },
+    "freq_factor": {
+      "$numberInt": "1"
+    },
+    "sets": {
+      "$numberInt": "8"
+    },
+    "workout": [
+      {
+        "name": "cat crawl",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "bear crawl",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "crab walk",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "loaded beast side lifts",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "crawl switch",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "ape crawl",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "frog crawl",
+        "1s_max": {
+          "$numberInt": "8"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "779f4c4bcfeccaf49389c4c6"
+    },
+    "path": "Jump Rope",
+    "title": "JR #1",
+    "tags": [
+      "#jr",
+      "#jr_intermediate"
+    ],
+    "rest_between_sets": {
+      "$numberInt": "1.5"
+    },
+    "rest_between_exercises": {
+      "$numberInt": "15"
+    },
+    "freq_factor": {
+      "$numberInt": "1"
+    },
+    "sets": {
+      "$numberInt": "8"
+    },
+    "workout": [
+      {
+        "name": "basic jump",
+        "1s_max": {
+          "$numberInt": "56"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "1.05"
+        }
+      },
+      {
+        "name": "straddle jump",
+        "1s_max": {
+          "$numberInt": "56"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "1.05"
+        }
+      },
+      {
+        "name": "front to back",
+        "1s_max": {
+          "$numberInt": "56"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "1.05"
+        }
+      },
+      {
+        "name": "criss cross",
+        "1s_max": {
+          "$numberInt": "17"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "name": "double unders",
+        "1s_max": {
+          "$numberInt": "6"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2.1"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "879f4c4bcfeccaf49389c4c6"
+    },
+    "path": "Calisthenics",
+    "title": "Calisthenics #1",
+    "tags": [
+      "#basics",
+      "#hsm"
+    ],
+    "rest_between_sets": {
+      "$numberInt": "1"
+    },
+    "rest_between_exercises": {
+      "$numberInt": "15"
+    },
+    "freq_factor": {
+      "$numberInt": "3"
+    },
+    "sets": {
+      "$numberInt": "15"
+    },
+    "workout": [
+      {
+        "name": "hindu pushups",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "5"
+        }
+      },
+      {
+        "name": "hindu squats",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "5"
+        }
+      },
+      {
+        "name": "mountain climbers",
+        "1s_max": {
+          "$numberInt": "30"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "2"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "869f4c4bcfeccaf49389c4c6"
+    },
+    "path": "Calisthenics",
+    "title": "Calisthenics #2",
+    "tags": [
+      "#basics",
+      "#hsm"
+    ],
+    "rest_between_sets": {
+      "$numberInt": "2"
+    },
+    "rest_between_exercises": {
+      "$numberInt": "15"
+    },
+    "freq_factor": {
+      "$numberInt": "3"
+    },
+    "sets": {
+      "$numberInt": "8"
+    },
+    "workout": [
+      {
+        "name": "hindu pushups",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "5"
+        }
+      },
+      {
+        "name": "hindu pushups",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "5"
+        }
+      },
+      {
+        "name": "hindu squats",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "5"
+        }
+      },
+      {
+        "name": "hindu squats",
+        "1s_max": {
+          "$numberInt": "7"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "5"
+        }
+      },
+      {
+        "name": "ab rollers",
+        "1s_max": {
+          "$numberInt": "5"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "7"
+        }
+      },
+      {
+        "name": "ab rollers",
+        "1s_max": {
+          "$numberInt": "5"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "7"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "979f4c4bcfeccaf49389c4c6"
+    },
+    "path": "Boxing",
+    "title": "Boxing #1",
+    "tags": [
+      "#basics"
+    ],
+    "rest_between_sets": {
+      "$numberInt": "1"
+    },
+    "rest_between_exercises": {
+      "$numberInt": "10"
+    },
+    "freq_factor": {
+      "$numberInt": "3"
+    },
+    "sets": {
+      "$numberInt": "15"
+    },
+    "workout": [
+      {
+        "name": "jab",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "cross",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "left hook (head)",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "right hook (body)",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "left hook (body)",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "right hook (head)",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "right uppercut",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      },
+      {
+        "name": "left uppercut",
+        "1s_max": {
+          "$numberInt": "15"
+        },
+        "upper": {
+          "$numberDouble": "0.2"
+        },
+        "lower": {
+          "$numberDouble": "0.2"
+        },
+        "seconds_per_rep": {
+          "$numberInt": "4"
+        }
+      }
+    ]
+  }
+]

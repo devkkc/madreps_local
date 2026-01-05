@@ -1,0 +1,51 @@
+  App Context
+  
+  Here are some of the definitions, terms, examples and features that are relevant to the app.
+
+  1. routine/workout config - a routine or workout is a set of exercises with a defined time per exercise, time between sets, reps, warmup, no. of sets etc.
+  2. exercise - exercise refers to each movement in the routine. Eg. jump rope (basic), double unders etc. 
+  3. workout component - this refers to each causal component in a workout - warmup, exercise, rest between exercises or rest between sets
+  4. generated workout - generated workout is the actual workout that is created using the workout configs. The workouts are generated when the user actually clicks on the workout and tries to play it i.e these generations are one time. The values/formula to calculate workout parameters are
+  - no. of sets - same as "sets" in data
+  - no. of reps per exercise - randbetween(1s_max - lower*1s_max, 1s_max + upper*1s_max). lower & upper are available in the data document. This should vary by set (i.e random value selected in set 1 and set 2 should be different)
+  - rest between exercises should the same as value in data (rest_between_exercises). This is in seconds.
+  - rest between sets should be calculated as ceil(rest_between_sets * (1 + abs(sin(180 * i/sets)))), where i = the i set (eg for 2nd set i=2) and sets is the number of sets in the routine. This is in minutes.
+  - when generating the workout, the exercises themselves should be randomly shuffled. For example, if the routine is ('Push Ups', 'Pull Ups', 'Squats') then for 1st set it can be ('Pull Ups', 'Squats', 'Push Ups') and 2nd can be ('Squats', 'Pulls Ups', 'Push Ups'). This has to be random. This option should be available in the configuration screen, so that the user can choose to shuffle or not.
+  - warmup has to be at the start.
+  - time for each exercise will be calculated from seconds_per_rep. ceil(the no. of reps calculated for each exercise * seconds_per_rep) will determine the time for each exercise.
+  5. workout player - The is the screen in which a generated workout is "played" i.e a user can start the workout and follow along. It should have a timer that shows how much time is left in the workout component (rest, exercise), and move from one component to the next until the workout ends. Starts with warmup, then moves on to the first exercise and so on. There should be buttons for previous, next, pause/play, exit which lets the user go to the previous component, next component, pause/play the workout and exit the workout respectively. It should also show what the next exercise & reps for that exercise is.
+  6. calibrate - The user should have an option to calibrate each workout. This means they give a feedback, numerical value from 1-10. Based on this feedback, the following parameters in the workout's configuration should change. The calibrate button should be available even before the user starts the workout. It should be alongside the configure and start buttons.
+  - 1s_max (new) = ceil(max(1, 1s_max * sqrt(feedback/8)))
+  This change needs to be updated in the corresponding document in user_workouts collection.
+  7. configure - The user should also have the option to manually configure each workout. This means they should be able to get into each workout's specification and make manual changes. Here are the inputs they can configure
+  - warmup time (in mins)
+  - no. of sets ("sets" in the document)
+  - rest_between_sets (in mins)
+  - rest_between_exercises (in seconds)
+  - seconds_per_rep (in seconds) - The list of exercises should be available in the configure screen, and seconds per rep should be configurable for each exercise.
+  - Max reps per set. This is the 1 rep max for the exercise.
+  - The user should be able to add or delete exercises from the list.
+  8. create - The user should have the option to create their own workouts as well. In the create screen they should be able to enter
+  - path
+  - warmup time (in mins)
+  - no. of sets ("sets" in the document)
+  - rest_between_sets (in mins)
+  - rest_between_exercises (in seconds)
+  - workout title
+  - exercise - 1s_max & seconds_per_rep. For example, if the first exercise is push ups, then the user should be able to input 'Push Ups', 9 for 1s_max and 2 seconds as time to complete 1 reps.
+  - Keep the UI of the create screen as similar to the 'configure' screen as possible.
+
+Steps to follow -
+
+Step 1 - 
+1. The UI on login should show a list of a tile for every path in the database. At the top, there should be a button to create a new workout. In this path tile, they should only see the path name and the no. of workouts available for that path.
+2. The user should be able to click on any of these tiles to go to the next screen where they can see the list of workouts for that path.
+3. The user should be able to click on any of these workouts to go to the workout preview screen.
+4. The workout preview screen should show the sets, rest between sets, rest between exercises, no. of reps and the exercises. At the bottom, the Start, Calibrate and Configure buttons should be horizantally aligned, and should be displayed in the same order.
+5. From the workout preview screen, the user should be able to click on the 'configure' button to go to the configure screen.
+6  From the workout preview screen, the user should be able to click on the 'calibrate' button to go to the calibration screen.
+7. From the workout preview screen, the user should be able to click on the 'start' button to go to the workout player screen.
+
+Step 2 - 
+1. The workout player screen should show the warmup first.
+2. The timer should start when the user clicks on the start button.
