@@ -1,52 +1,72 @@
-# MadReps: Intelligent Workout Engine
+# MadReps
 
-**Stochastic workout generation for optimized training with minimal input.**
+MadReps is a workout timer that handles the planning for you. Instead of doing the same number of reps every time, the app uses math to change your workout every day so you stay challenged without getting bored or burnt out.
 
-MadReps is a logic-driven workout application designed to eliminate decision fatigue and the burden of manual tracking. Unlike traditional fitness apps that require you to act as an accountant logging every repetition, MadReps uses stochastic generation and mathematical scaling to create dynamic, evolving training sessions.
+## Why use MadReps?
 
-It requires only **one single input** from you—a post-workout rating—to mathematically adjust your future training volume.
+### 1. Less thinking, more moving
+Most apps make you log every single set and weight. With MadReps, you only give one number when you finish: a rating from 1 to 10 on how hard the workout felt. The app uses that rating to automatically update your strength levels for the next time. This means you spend less time typing and more time training.
 
----
+### 2. Variety keeps it interesting
+If you always do the same number of reps, you eventually get bored or hit a wall. MadReps uses controlled randomness to pick a different number of reps for every set.
+* Some sets will feel a bit easier, giving you a mental break.
+* Some sets will feel a bit harder, pushing your limits.
+This variety keeps your body guessing and prevents the mental drain of trying to hit a personal best every single day.
 
-## The MadReps Philosophy
-
-### 1. Zero-Friction Tracking (Low Cognitive Load)
-Most workout apps are mentally taxing, forcing you to input data constantly during training. MadReps flips the script. You focus on the movement; the engine handles the math. By providing a single feedback score (1-10) at the end of a session, the application automatically calibrates your strength profile for the next workout using a square-root growth formula.
-
-### 2. The Power of Stochastic Variance
-Training linearly often leads to mental burnout or physical plateaus. MadReps uses controlled randomness ("stochastic process") under defined limits to generate repetitions.
-* **The Push-Pull Effect:** By varying rep counts within a controlled range based on your 1-set max, some sets will feel lighter, providing a mental "win," while others push your limits.
-* **Sustained Engagement:** This variance keeps the central nervous system engaged and prevents the psychological strain of feeling like you must hit a personal record every single session.
+### 3. Smart rest periods
+The app does not use a flat timer for rest. It calculates your rest periods so you get more recovery time during the toughest parts of the workout and less when you are fresh and just starting.
 
 ---
 
-## Key Features
-
-* **Dynamic Generation**: Workouts are generated just-in-time. Repetitions and exercise order change every time you play.
-* **Smart Calibration**: A feedback-driven system that updates your strength metrics automatically based on perceived exertion.
-* **Sinusoidal Rest Scaling**: Rest intervals are not static; they scale using a sine function to optimize recovery during the most intense parts of the workout.
-* **Path-Based Organization**: Organize routines by distinct training styles (e.g., Animal Flow, Jump Rope, Calisthenics).
-* **Workout Player**: A focused, timer-based interface with previous/next controls and upcoming exercise previews.
-* **Exercise Shuffling**: Optional toggling to randomize exercise order per set, preventing order bias fatigue.
-
----
-
-## Workout Generation Flowchart
-
-Below is the logic flow for how a static configuration becomes a dynamic workout session and how user feedback loops back into the system.
+## How it Works
 
 ```mermaid
-graph TD
-    A[Workout Config Blueprint] -->|User clicks Play| B(Generation Engine);
-    B --> C{Stochastic Processes};
-    C -->|Calculate Reps| D[Reps based on 1s_max bounds];
-    C -->|Calculate Rest| E[Sinusoidal Rest Scaling];
-    C -->|Optional| F[Shuffle Exercise Order];
-    D --> G[Generated Workout Sequence];
-    E --> G;
-    F --> G;
-    G -->|Loaded into| H[Workout Player UI];
-    H -->|User completes session| I[User Feedback Input 1-10];
-    I -->|Apply Calibration Formula| J(Update 1s_max);
-    J -->|Save new metrics| K[(Database/LocalStorage)];
-    K -->|Next session references| A;
+graph LR
+    A[Pick a Workout] --> B[Hit Play]
+    B --> C[App Randomizes Reps and Order]
+    C --> D[Follow the Timer]
+    D --> E[Rate Workout 1-10]
+    E --> F[App Updates Strength Levels]
+    F --> A
+```
+
+---
+
+## Main Features
+
+* Fresh Workouts: Every time you start, the rep counts and the order of exercises change automatically.
+* Auto-Adjustment: Give a score from 1-10 and the app makes the next workout harder or easier for you.
+* Simple Timer: A clear screen that tells you what to do, how many reps to perform, and what is coming up next.
+* Customization: You can still go in and manually change sets, rest times, or exercises whenever you want.
+* Organized Paths: Group your workouts into categories like Jump Rope, Bodyweight, or Strength.
+
+---
+
+## Technical Details (The Formulae)
+
+If you are interested in the math behind the app, here are the calculations used:
+
+### 1. Repetition Calculation
+The app looks at your 1-set max ($1s\_max$) and picks a random number within your lower and upper bounds.
+
+$$Reps = randbetween(1s\_max - (lower \cdot 1s\_max), 1s\_max + (upper \cdot 1s\_max))$$
+
+### 2. Rest Between Sets
+Rest time ($i$) changes per set using a sine wave so that you get more rest in the middle of the workout.
+
+$$Rest (min) = \lceil rest\_between\_sets \cdot (1 + |\sin(180 \cdot \frac{i}{sets})|) \rceil$$
+
+### 3. Strength Calibration
+When you give feedback ($f$) from 1-10, your $1s\_max$ is updated for the next session.
+
+$$New 1s\_max = \lceil \max(1, 1s\_max \cdot \sqrt{\frac{f}{8}}) \rceil$$
+
+---
+
+## Setup and Installation
+
+1. Install: Run `npm install` in your terminal.
+2. Run: Run `npm run dev` to start the app.
+3. Use: Open `http://localhost:5173` in your browser.
+
+Data Storage: Your workouts and progress are saved in your browser's local storage. No accounts are required to get started.
